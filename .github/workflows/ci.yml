@@ -3,7 +3,7 @@ on:
   pull_request:
     branches: [develop]
   push:
-    branches: [develop]  
+    branches: [develop]
 
 jobs:
   build:
@@ -21,7 +21,7 @@ jobs:
           CI: true
       - name: Build Project
         if: github.context.event-name == 'push'
-        run: npm run build    
+        run: npm run build
       - run: npm install -g surge
       - name: Deploy to Staging
         if: github.context.event-name == 'push'
