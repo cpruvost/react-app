@@ -19,6 +19,9 @@ jobs:
       - run: npm test -- --coverage
         env:
           CI: true
+      - name: Print GitHub event action
+        run: |
+          echo "${{ github.event.action }}"    
       - name: Build Project
         if: github.context.event-name == 'push'
         run: npm run build
