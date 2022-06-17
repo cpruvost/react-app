@@ -23,11 +23,11 @@ jobs:
         run: |
           echo "${{ github.event_name }}"
       - name: Build Project
-        if: github.context.event-name == 'push'
+        if: github.event-name == 'push'
         run: npm run build
       - run: npm install -g surge
       - name: Deploy to Staging
-        if: github.context.event-name == 'push'
+        if: github.event-name == 'push'
         run: npx surge --project ./build --domain totof44.surge.sh
         env:
           SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
