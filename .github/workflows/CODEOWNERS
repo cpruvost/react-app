@@ -1,0 +1,4 @@
+* @cpruvost
+*.js @cpruvost
+*.yml @cpruvostdev
+/public/ @cpruvost
