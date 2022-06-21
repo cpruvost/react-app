@@ -4,9 +4,7 @@ on:
   release:
     types: [published]
 
-jobs:  
+jobs:
   slack-message:
     runs-on: ubuntu-latest
     steps:
-      
-  
