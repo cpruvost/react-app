@@ -1,22 +1,22 @@
-name: 'Open github issue'
+name: "Open github issue"
 author: C.Pruvost
-description: 'Opens a github issue'
+description: "Opens a github issue"
 inputs:
   token:
-    description: 'Github Token'
+    description: "Github Token"
     required: true
   title:
-    description: 'Issue Title'
-    required: true  
+    description: "Issue Title"
+    required: true
   body:
-    description: 'Issue Body'
+    description: "Issue Body"
     required: false
   assignees:
-    description: 'Issue Asssignees'
+    description: "Issue Asssignees"
     required: false
 outputs:
   issue:
-    description: 'The Issue object'   
+    description: "The Issue object"
 runs:
-  using: 'node16'
-  main: 'dist/index.js'     
+  using: "node16"
+  main: "dist/index.js"

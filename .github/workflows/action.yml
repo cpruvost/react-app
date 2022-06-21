@@ -18,9 +18,9 @@ jobs:
           body: Body
           assignees: |
             cpruvost
-            cpruvostdev   
+            cpruvostdev
       - run: |
-          echo ${{ steps.issue.outputs.issue }}      
+          echo ${{ steps.issue.outputs.issue }}
       - uses: ./.github/actions/hello
         id: hello
         with:
