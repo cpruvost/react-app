@@ -10,6 +10,17 @@ jobs:
         run: |
           pwd
           ls -a
+      - uses: ./.github/actions/issue
+        id: issue
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: Title
+          body: Body
+          assignees: |
+            cpruvost
+            cpruvostdev   
+      - run: |
+          echo ${{ steps.issue.outputs.issue }}      
       - uses: ./.github/actions/hello
         id: hello
         with:

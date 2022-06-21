@@ -15,7 +15,7 @@ try {
   const time = new Date();
   core.setOutput("time", time.toTimeString());
 
-  core.startGroup("Login");
+  core.startGroup("Login Github Object");
   console.log(JSON.stringify(github, null, "\t"));
   core.endGroup();
 
