@@ -10,6 +10,7 @@ jobs:
         run: |
           pwd
           ls -a
+      - run: npm install @octokit/action    
       - uses: ./.github/actions/issue
         id: issue
         with:
