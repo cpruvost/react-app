@@ -5,7 +5,7 @@ inputs:
   who-to-greet:
     description: "Who to greet"
     required: true
-    default: totof44.surge.sh
+    default: cpruvost
 outputs:
   time:
     description: "The greeting time"
