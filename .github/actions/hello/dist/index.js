@@ -885,13 +885,22 @@ const github = __webpack_require__(469);
 try {
   //throw( new Error("SOme Eroor Message"));
 
+  core.debug("Debug message");
+  core.warning("Warning message");
+  core.error("Error message");
+
   const name = core.getInput("who-to-greet");
-  console.log('Hello ' + name);
+  core.setSecret(name);
+  console.log("Hello " + name);
 
   const time = new Date();
   core.setOutput("time", time.toTimeString());
 
+  core.startGroup("Login");
   console.log(JSON.stringify(github, null, "\t"));
+  core.endGroup();
+
+  core.exportVariable("HELLO", "hello");
 } catch (error) {
   core / core.setFailed(error.message);
 }
