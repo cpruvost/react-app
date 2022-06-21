@@ -5,7 +5,7 @@ try {
   //throw( new Error("SOme Eroor Message"));
 
   const name = core.getInput("who-to-greet");
-  console.log('Hello ${name}');
+  console.log('Hello ' + name);
 
   const time = new Date();
   core.setOutput("time", time.toTimeString());
