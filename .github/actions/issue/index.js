@@ -7,7 +7,7 @@ try {
     const body = core.getInput('body');
     const assignees = core.getInput('assignees');
 
-    const oktopic = new github.github(token);
+    const oktopic = new github.Github(token);
 
     const response = octokit.rest.issues.create({
         //owner: github.context.repo.owner,
