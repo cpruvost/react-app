@@ -26,6 +26,11 @@ jobs:
         id: hello
         with:
           who-to-greet: "World"
+      - uses: ./.github/actions/hello-docker
+        id: hellodocker
+        with:
+          who-to-greet: "World"    
       - run: |
-          echo "Time: ${{ steps.Hello.outputs.time }}"
+          echo "Time: ${{ steps.hello.outputs.time }}"
+          echo "Time: ${{ steps.hellodocker.outputs.time }}"
           echo $HELLO
